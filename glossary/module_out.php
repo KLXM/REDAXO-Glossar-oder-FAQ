@@ -1,5 +1,5 @@
 <?php
-// REDAXO Glossary for yform
+// REDAXO Glossary or FAQ for yform
 // Creator: Thomas Skerbis, KLXM Crossmedia GmbH
 // Version: 1.0 
 // License: Public domain 
