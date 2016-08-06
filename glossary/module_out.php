@@ -14,16 +14,17 @@ if (count($sql)) {
 // Wenn Datensätze im $sql vorliegen 
 foreach($sql as $row)
 {
- $id=$row->getValue("id");
+ $id = $row->getValue("id");
  $begriff = $row->getValue("Begriff");
+ $char = strtoupper(substr($begriff,0,1)); // Erster Buchstabe
  $beschreibung = $row->getValue("beschreibung");
  # $beschreibung = nl2br($beschreibung); // wenn nur eine Textarea ohne WYSIWYG verwendet wird
  $counter++;
- // Ausgabe des Buchstabens, wenn in $dummy nicht bereits vorhanden.  
- if (strtoupper(substr($begriff,0,1)) != $dummy) { 
+ // Ausgabe des Buchstabens, wenn in $dummy nicht bereits vorhanden. 
+ if ($char != $dummy) { 
     $bcounter++;   
-    $buchstabe ='<h2 id="buchstabe'.strtoupper(substr($begriff,0,1)).'">'.strtoupper(substr($begriff,0,1)). '</h2>'; 
-    $index .= '<a type="button" class="btn btn-default" href="#buchstabe'.strtoupper(substr($begriff,0,1)).'">'.strtoupper(substr($begriff,0,1)). '</a>';
+    $buchstabe ='<h2 id="buchstabe'.$char.'">'.$char. '</h2>'; 
+    $index .= '<a type="button" class="btn btn-default" href="#buchstabe'.$char.'">'.$char. '</a>';
     // Erstellt Links für das Alphabet am Anfang 
  } 
  else {$buchstabe = "";}
@@ -39,7 +40,7 @@ $out .= $buchstabe.'
             </div>
         </div>';
 //dummy nimmt den aktuellen Buchstaben auf. 
-$dummy = strtoupper(substr($begriff,0,1));
+$dummy = $char;
 
  } 
 echo $index; // gibt Schnellinks als Alphabet aus
