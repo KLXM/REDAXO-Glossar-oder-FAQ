@@ -19,6 +19,7 @@ foreach($sql as $row)
  $beschreibung = $row->getValue("beschreibung");
  # $beschreibung = nl2br($beschreibung); // wenn nur eine Textarea ohne WYSIWYG verwendet wird
  $counter++;
+ // Ausgabe des Buchstabens, wenn in $dummy nicht bereits vorhanden.  
  if (strtoupper(substr($begriff,0,1)) != $dummy) { 
     $bcounter++;   
     $buchstabe ='<h2 id="buchstabe'.strtoupper(substr($begriff,0,1)).'">'.strtoupper(substr($begriff,0,1)). '</h2>'; 
