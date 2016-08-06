@@ -24,8 +24,8 @@ foreach($sql as $row)
  if (strtoupper(substr($begriff,0,1)) != $dummy) { 
     $bcounter++;   
     $buchstabe ='<h2 id="buchstabe'.strtoupper(substr($begriff,0,1)).'">'.strtoupper(substr($begriff,0,1)). '</h2>'; 
+    $index .= '<a type="button" class="btn btn-default" href="#buchstabe'.strtoupper(substr($begriff,0,1)).'">'.strtoupper(substr($begriff,0,1)). '</a>';
     // Erstellt Links für das Alphabet am Anfang 
-    $index .= '<a type="button" class="btn btn-default" href="#buchstabe'.strtoupper(substr($begriff,0,1)).'">'.strtoupper(substr($begriff,0,1)). '</a>';   
  } 
  else {$buchstabe = "";}
 // Ausgabe als Bootstrap Panel
