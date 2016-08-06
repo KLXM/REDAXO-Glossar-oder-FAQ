@@ -13,7 +13,7 @@ foreach($sql as $row)
 $id=$row->getValue("id");
 $begriff = $row->getValue("Begriff");
 $beschreibung = $row->getValue("beschreibung");
-$beschreibung = nl2br($beschreibung);
+# $beschreibung = nl2br($beschreibung); // wenn nur eine Textarea ohne WYSIWYG verwendet wird
  $counter++;
  if (strtoupper(substr($begriff,0,1)) != $dummy) { 
  $bcounter++;   
