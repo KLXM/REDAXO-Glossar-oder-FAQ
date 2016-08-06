@@ -36,7 +36,7 @@ $out .= $buchstabe.'
                 </div>
             </div>
         </div>';
-
+//dummy nimmt den aktuellen Buchstaben auf. 
 $dummy = strtoupper(substr($begriff,0,1));
 
  } 
