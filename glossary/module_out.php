@@ -42,7 +42,7 @@ $out .= $buchstabe.'
 $dummy = strtoupper(substr($begriff,0,1));
 
  } 
-echo $index;
-echo $out;
+echo $index; // gibt Schnellinks als Alphabet aus
+echo $out; // Ausgabe der Panels und Überschriften
 }
 ?>
