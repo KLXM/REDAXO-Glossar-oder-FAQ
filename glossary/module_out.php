@@ -1,4 +1,8 @@
 <?php
+// REDAXO Glossary for yform
+// Creator: Thomas Skerbis, KLXM Crossmedia GmbH
+// Version: 1.0 
+// License: Public domain 
 
 $db_table = "rex_glossar";
 $sql = rex_sql::factory();
