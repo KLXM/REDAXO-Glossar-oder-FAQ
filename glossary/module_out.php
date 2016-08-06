@@ -24,7 +24,7 @@ foreach($sql as $row)
     $index .= '<a type="button" class="btn btn-default" href="#buchstabe'.strtoupper(substr($begriff,0,1)).'">'.strtoupper(substr($begriff,0,1)). '</a>';   
  } 
  else {$buchstabe = "";}
- 
+// Ausgabe als Bootstrap Panel
 $out .= $buchstabe.' 
 <div class="panel panel-default">
             <div class="panel-heading">
