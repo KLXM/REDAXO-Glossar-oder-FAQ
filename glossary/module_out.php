@@ -7,7 +7,7 @@
 $db_table = "rex_glossar";
 $sql = rex_sql::factory();
 $query = "SELECT * FROM $db_table  ORDER BY Begriff ";
-// $sql->debugsql = 1;
+$sql->setDebug(false); //Ausgabe Query
 $sql->setQuery($query, array($id));
 $counter=1;
 $bcounter=1;
