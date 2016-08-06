@@ -12,6 +12,7 @@ $sql->setQuery($query, array($id));
 $counter=1;
 $bcounter=1;
 if (count($sql)) {
+// Wenn Datensätze im $sql vorliegen 
 foreach($sql as $row)
 {
  $id=$row->getValue("id");
